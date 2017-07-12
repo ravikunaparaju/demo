@@ -56,8 +56,7 @@ public class Login_steps {
 
 	@Then("^user is logged into the application$")
 	public void user_is_logged_into_the_application() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	   // Assert.assertTrue(support.element_exists(obj.loginSuccess));
 	}
 
 
