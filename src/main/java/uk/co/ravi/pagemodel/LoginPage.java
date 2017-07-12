@@ -1,5 +1,6 @@
 /*
  * @author Ravi Kunaparaju  
+ *  
  */
 package uk.co.ravi.pagemodel;
 
@@ -7,22 +8,26 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import uk.co.ravi.utils.*;
 
-public class HomePage{
+public class LoginPage {
 	private final WebDriver driver;
 	ObjectRepository obj= new ObjectRepository();
 	Support support;
 	String env = AppProperties.get("environment");
 	
-	public HomePage(WebDriver driver){		
+	public LoginPage(WebDriver driver){		
 		 this.driver=(WebDriver) driver;
 		 support = PageFactory.initElements(driver, Support.class);
 	 }
-	
-	public void navToSignUpPage(){
-		support.click(obj.getStartedButton);
+	public void enterUserName(String uname){
+		support.enter_text(obj.lUsername, uname);
 	}
 	
-	public void navToSignInSelPage(){
-		support.clickElementByJS(obj.login_jquery);
+	public void enterPassword(String pwd){
+		support.enter_text(obj.lPassword, pwd);
 	}
+	
+	public void signIn(){
+		support.click(obj.signInButton);
+	}
+	
 }

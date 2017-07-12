@@ -36,7 +36,7 @@ public class RegistrationPage {
 	}
 	
 	public void clickApply(){
-		
+		support.click(obj.apply);
 	}
 	
 	public void register(){

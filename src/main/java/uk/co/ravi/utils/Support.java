@@ -111,4 +111,9 @@ public class Support {
 		WebElement element1 = driver.findElement(By.xpath(element));
 		jse.executeScript("arguments[0].scrollIntoView(true);", element1);
 	}
+	
+	public void clickElementByJS(String query){
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript(query+".click();");
+	}
 }
