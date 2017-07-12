@@ -12,5 +12,5 @@ public class ObjectRepository {
 	public final String password = "//input[@id='id_password']";
 	public final String terms = "//span[@class='checkbox-glyph']";
 	public final String apply = "//button[@class='btn btn-primary is-wide btn-large is-icon']";
-	
+	public final String signUpQuestionnaire = "//*[text()='Sign up Questionnaire']";
 }

@@ -11,10 +11,8 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-
 import java.sql.Time;
 import java.time.Instant;
-
 import org.junit.Assert;
 
 public class Registration_steps {
@@ -60,13 +58,14 @@ public class Registration_steps {
 	public void enabled_terms_clicked_Apply_button() throws Throwable {
 	    reg.selectTerms();
 	    System.out.println("time in epoch is + "+time);
-	    // commented clicking apply button action to avoid registration
+	    // commented clicking apply button to avoid registration
 	    //reg.clickApply();
 	}
 
 	@Then("^account should be created and user eligibility questionnaire should be displayed$")
 	public void account_should_be_created_and_user_eligibility_questionnaire_should_be_displayed() throws Throwable {
-	    
+	    // commented as account is not being created.
+		//Assert.assertTrue(support.element_exists(obj.signUpQuestionnaire));
 	}
 	
 }
